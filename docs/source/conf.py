@@ -2,9 +2,9 @@
 
 # -- Project information
 
-project = 'project'
-copyright = 'copy'
-author = 'author'
+project = 'piiquante'
+copyright = 'openclassroom'
+author = 'anthony mini'
 
 release = '0.1'
 version = '0.1.0'
