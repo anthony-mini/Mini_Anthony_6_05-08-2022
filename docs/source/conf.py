@@ -2,9 +2,9 @@
 
 # -- Project information
 
-project = ''
-copyright = ''
-author = ''
+project = 'project'
+copyright = 'copy'
+author = 'author'
 
 release = '0.1'
 version = '0.1.0'
