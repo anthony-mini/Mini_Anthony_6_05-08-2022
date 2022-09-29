@@ -1,5 +1,5 @@
 Welcome to Piiquante's documentation!
-===================================
+======================================
 
 **Piiquante** is a ...
 
@@ -14,4 +14,4 @@ Contents
 
    introduction
 
-**Piiquante** has its documentation hosted on Read the Docs.
+Piiquante has its documentation hosted on Read the Docs.
