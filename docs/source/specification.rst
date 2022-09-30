@@ -82,3 +82,23 @@ que seul le propriétaire de la sauce peut apporter des modifications à celle-c
 
 **Exigences de sécurité**
 -------------------------
+* Le mot de passe de l'utilisateur doit être haché.
+* L'authentification doit être renforcée sur toutes les routes sauce requises.
+* Les adresses électroniques dans la base de données sont uniques et un plugin Mongoose approprié est utilisé pour garantir leur unicité et signaler les erreurs
+* La sécurité de la base de données MongoDB (à partir d'un service tel que MongoDB Atlas) ne doit pas empêcher l'application de se lancer sur la machine d'un utilisateur.
+* Un plugin Mongoose doit assurer la remontée des erreurs issues de la base de données.
+* Les versions les plus récentes des logiciels sont utilisées avec des correctifs de sécurité actualisés.
+* Le contenu du dossier images ne doit pas être téléchargé sur GitHub.
+
+**Repository GitHub**
+---------------------
+Retirez le code de l'application front-end du repository du projet et suivez les étapes suivantes :
+
+#. Clonez le repository
+#. Ouvez un terminal ou invite de commande.
+#. Exécutez ``npm install`` à partir du répertoire du projet.
+#. Exécutez ``npm start``.
+#. Exécutez le back-end sur :ref:`http://localhost:3000` seulement. 
+
+.. note:: 
+    Si vous utilisez VSCode, utilisez l'extension LiveShare pour faire fonctionner le serveur front-end sans avoir recours à npm install. 
