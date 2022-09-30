@@ -34,7 +34,7 @@ Les artefacts de construction seront stockés dans le répertoire **dist/**.
 Exécuter des tests unitaires :
 ------------------------------
 
-Exécutez ``ng test``pour exécuter les tests unitaires via [karma] (https://karma-runner.github.io).
+Exécutez ``ng test`` pour exécuter les tests unitaires via [karma] (https://karma-runner.github.io).
 
 Exécution de test de bout en bout :
 -----------------------------------
