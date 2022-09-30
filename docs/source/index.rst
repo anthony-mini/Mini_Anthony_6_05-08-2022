@@ -6,10 +6,10 @@ Bienvenue sur la documentation de l'application : Piiquante
 Technologies utilisés :
 ***********************
 
-**Angular**
-**TypeScript**
-**Node.js**
-**MongoDB**
+* **Angular**
+* **TypeScript**
+* **Node.js**
+* **MongoDB**
 
 .. note::
 
