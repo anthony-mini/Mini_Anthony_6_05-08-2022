@@ -19,10 +19,15 @@ Contents
 --------
 
 .. toctree::
+   :maxdepth: 1
+   :caption: Introduction
 
-   introduction
+   presentation
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Guides
+
    installation
    specification
-
-Piiquante has its documentation hosted on Read the Docs.
 
