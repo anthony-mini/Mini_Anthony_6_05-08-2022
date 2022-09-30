@@ -1,8 +1,7 @@
 Spécification de l'API : 
 ========================
 
-.. list-table:: spéficiations techniques de l'API
-
+.. list-table:: 
    :widths: 25 25 50
    :header-rows: 1
 
