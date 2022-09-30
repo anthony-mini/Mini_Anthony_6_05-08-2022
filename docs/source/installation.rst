@@ -27,22 +27,22 @@ Vous pouvez également utiliser ``ng generate directive|pipe|service|class|guard
 Construire :
 ------------
 
-Exécutez ``ng build``pour compiler le projet. 
+Exécutez ``ng build`` pour compiler le projet. 
 
 Les artefacts de construction seront stockés dans le répertoire **dist/**. 
 
 Exécuter des tests unitaires :
 ------------------------------
 
-Exécutez ``ng test`` pour exécuter les tests unitaires via [karma] (https://karma-runner.github.io).
+Exécutez ``ng test``pour exécuter les tests unitaires via [karma] (https://karma-runner.github.io).
 
 Exécution de test de bout en bout :
 -----------------------------------
 
-Exécutez ``ng e2e``pour exécuter les tests de bout en bout via une plate-forme de votre choix. 
+Exécutez ``ng e2e`` pour exécuter les tests de bout en bout via une plate-forme de votre choix. 
 Pour utiliser cette commande, vous devez d'abord ajouter un package qui implémente des fonctionnalités de test de bout en bout. 
 
 Aide supplémentaire : 
 ---------------------
 
-Pour obtenir plus d'aide sur la CLI angulaire, utilisez ``ng help``ou consultez la page [Angular CLI Overview and Command Reference] (https://angular.io/cli).
+Pour obtenir plus d'aide sur la CLI angulaire, utilisez ``ng help`` ou consultez la page [Angular CLI Overview and Command Reference] (https://angular.io/cli).
