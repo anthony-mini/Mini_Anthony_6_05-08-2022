@@ -76,6 +76,7 @@ que seul le propriétaire de la sauce peut apporter des modifications à celle-c
 * **userDisliked** : ["String <userId>"] -- tableau des identifiants des utilisateurs qui n'ont pas aimé (= disliked) la sauce
 
 **Utilisateur**
+***************
 * **email** : String -- adresse e-mail de l'utilisateur [**unique**]
 * **password** : String -- mot de passe de l'utilisateur haché
 
