@@ -98,7 +98,7 @@ Retirez le code de l'application front-end du repository du projet et suivez les
 #. Ouvez un terminal ou invite de commande.
 #. Exécutez ``npm install`` à partir du répertoire du projet.
 #. Exécutez ``npm start``.
-#. Exécutez le back-end sur `<http://localhost:3000>`_. seulement. 
+#. Exécutez le back-end sur `<http://localhost:3000>`_ seulement. 
 
 .. note:: 
     Si vous utilisez VSCode, utilisez l'extension LiveShare pour faire fonctionner le serveur front-end sans avoir recours à npm install. 
