@@ -2,8 +2,8 @@
 
 # -- Project information
 
-project = 'piiquante'
-copyright = 'openclassroom'
+project = 'Piiquante'
+copyright = 'Openclassroom 2022'
 author = 'anthony mini'
 
 release = '0.1'

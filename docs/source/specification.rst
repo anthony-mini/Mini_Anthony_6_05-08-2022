@@ -1,5 +1,5 @@
-Spécification de l'API : 
-========================
+Spécification de l'API 
+======================
 
 .. list-table:: 
    :widths: 25 25 25 25 50
