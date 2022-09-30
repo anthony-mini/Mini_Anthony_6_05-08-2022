@@ -22,7 +22,7 @@ Contents
 
    introduction
    installation
-   specifiaction
+   specification
 
 Piiquante has its documentation hosted on Read the Docs.
 

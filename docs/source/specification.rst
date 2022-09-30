@@ -3,7 +3,7 @@ Spécification de l'API :
 
 .. list-table:: spéficiations techniques de l'API
 
-    :widths: 25 25 50
+   :widths: 25 25 50
    :header-rows: 1
 
    * - method
