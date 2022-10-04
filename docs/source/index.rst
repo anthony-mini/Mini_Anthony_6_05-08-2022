@@ -23,6 +23,7 @@ Contents
    :caption: Introduction
 
    presentation
+   front-end
 
 .. toctree::
    :maxdepth: 1
