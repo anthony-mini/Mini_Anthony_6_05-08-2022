@@ -42,3 +42,5 @@ Base de données MongoDB :
 
 * Communiquer directement avec la base de données pour la lecture et l'écriture des documents.
 
+.. note::
+    Accéder à la base de donnée *MongoDB*, en vous connectant avec votre identifiant à l'adresse suivante : `<https://www.mongodb.com/atlas/database>`_.

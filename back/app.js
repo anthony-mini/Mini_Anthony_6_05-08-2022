@@ -9,6 +9,17 @@
 */
 
 const express = require('express');
+const mongoose = require('mongoose');
+
+/**
+ * ** Connexion à la base de données MongoDB via Mongoose **
+ */
+
+ mongoose.connect('mongodb+srv://admin-piiquante:u5jGx1XX6dKuecag-4Tmn9jcy3UxvxB4J-LxGLfPgT3h2chIxu@database-piiquante.disfiye.mongodb.net/?retryWrites=true&w=majority',
+ { useNewUrlParser: true,
+   useUnifiedTopology: true })
+ .then(() => console.log('Connexion à MongoDB réussie !'))
+ .catch(() => console.log('Connexion à MongoDB échouée !'));
 
 const app = express();
 
