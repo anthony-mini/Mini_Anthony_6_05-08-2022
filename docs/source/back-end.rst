@@ -23,10 +23,6 @@ Accédez à `<http://localhost:3000>`_, pour accéder à l'interface.
 Express
 -------
 
-#. Installation du package :
-
-.. code-block:: shell 
-
-    npm install express --save
+#. Installation du package avec la commande ``npm install express --save``.
 
 #. Fichier app.js pour gérer l'application ``Express``.
