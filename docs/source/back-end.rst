@@ -26,3 +26,19 @@ Express
 #. Installation du package avec la commande ``npm install express --save``.
 
 #. Fichier app.js pour gérer l'application ``Express``.
+
+Base de données MongoDB : 
+-------------------------
+
+* Installation du package **Mongoose** avec la commande ``npm install mongoose``.
+
+.. note:: 
+
+    Mongoose est un package qui facilite les interactions avec notre base de données MongoDB. Il nous permet de :
+
+* Valider le format des données ;
+
+* Gérer les relations entre les documents ;
+
+* Communiquer directement avec la base de données pour la lecture et l'écriture des documents.
+
