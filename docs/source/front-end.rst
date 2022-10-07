@@ -1,8 +1,8 @@
 Front-end
 =========
 
-Installation
-------------
+Démarrer le serveur Node
+------------------------
 
 À partir du dossier front ``cd/front``, installer les dépendances du serveur de développement en exécutant les commandes suivante : 
 
