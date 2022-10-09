@@ -27,7 +27,7 @@ Enregistrement des Sauces dans la base données :
 
 * Enregistrement de l'objet, avec la methode **save**, dans notre base de donnée. 
 
-* La méthode **save** renvoie une Promise qui nous permet de ne pas avoir une expiration de requête. ``then()``nous renvoie une réponse de réussite avec un code : *201*. ``catch()``nous renvoie une réponse d'erreur générer par **Mongoose**, avec un code erreur : *400*. 
+* La méthode **save** renvoie une Promise qui nous permet de ne pas avoir une expiration de requête.
 
 .. note:: 
 
