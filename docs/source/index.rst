@@ -35,7 +35,7 @@ Contents
    :caption: Back-end
 
    initialisation-back
-   fichiers
+   controleurs
 
 .. toctree::
    :maxdepth: 1

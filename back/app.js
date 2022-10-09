@@ -1,15 +1,16 @@
 /**
-* Importation d'express avec la commande `require`
+* Importation d'express avec la commande ** require **
 *
-* Constante *app* qui fera appel à la méthode `express()`qui permet l'appel de l'application express.
+* Importation de moongose avec la methode ** require **
 *
-* Méthode `use`. Pour que le serveur Node retourne une réponse en fonction de l'application Express. --> Envoie d'une réponse en Json avec l'objet `message`.
+* Importation des models : sauce et user.
 *
-* Exportation de cette constante pour pouvoir y accéder dans d'autres fichiers
 */
 
 const express = require('express');
 const mongoose = require('mongoose');
+const sauce = require('./models/sauce');
+const user = require('./models/user');
 
 /**
  * ** Connexion à la base de données MongoDB via Mongoose **
@@ -21,6 +22,7 @@ const mongoose = require('mongoose');
  .then(() => console.log('Connexion à MongoDB réussie !'))
  .catch(() => console.log('Connexion à MongoDB échouée !'));
 
+// Appel de l'application express.
 const app = express();
 
 /**
@@ -43,4 +45,5 @@ app.use(express.json());
   next();
 });
 
+// Exportation de cette constante pour pouvoir y accéder dans d'autres fichiers
 module.exports = app;
