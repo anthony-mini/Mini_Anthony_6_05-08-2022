@@ -71,7 +71,7 @@ Récupération d'une Sauce spécifique
   sauce.findOne({ _id: req.params.id })
     .then(sauce => res.status(200).json(sauce))
     .catch(error => res.status(404).json({ error }));
-});
+  });
 
 * Utilisation de la méthode **get()**. 
 
@@ -90,7 +90,7 @@ Modification d'une sauce
   sauce.updateOne({ _id: req.params.id }, { ...req.body, _id: req.params.id })
     .then(() => res.status(200).json({ message: 'Sauce modifié !'}))
     .catch(error => res.status(400).json({ error }));
-});
+  });
 
 * Utilisation de la méthode **put()**.
 * Utilisation de la méthode **updateOne** pour mettre à jour la *sauce* correspondant à l'objet passé en permière argument. 
@@ -105,4 +105,4 @@ Suppression d'une sauce
   sauce.deleteOne({ _id: req.params.id })
     .then(() => res.status(200).json({ message: 'Sauce supprimé !'}))
     .catch(error => res.status(400).json({ error }));
-});
+  });
