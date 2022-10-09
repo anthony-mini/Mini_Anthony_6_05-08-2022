@@ -1,5 +1,5 @@
-Front-end
-=========
+Installation des dépendances
+============================
 
 Démarrer le serveur Node
 ------------------------

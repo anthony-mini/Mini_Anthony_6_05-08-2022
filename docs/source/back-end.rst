@@ -1,10 +1,10 @@
-Back-end
-========
+Installation des dépendances
+============================
 
 Démarrer le serveur Node
 ------------------------
 
-package nodemon :
+Package nodemon :
 ******************
 
 À partir du dossier front ``cd/back``, installer l'outil de developpement **nodemon** : 
@@ -20,15 +20,15 @@ Accédez à `<http://localhost:3000>`_, pour accéder à l'interface.
     Nodemon est un package qui mettra à jour votre serveur démarré à chaque changement de fichier, vous facilitant le développement Node.
 
 
-Express
--------
+Installation de l'application : **Express**
+-------------------------------------------
 
-#. Installation du package avec la commande ``npm install express --save``.
+#. Dans le dossier ``cd/back``, installer le package avec la commande ``npm install express --save``.
 
-#. Fichier app.js pour gérer l'application ``Express``.
+#. Le fichier **app.js** est utilisé pour la gestion de l'application *Express*.
 
-Base de données MongoDB : 
--------------------------
+Base de données **MongoDB** : 
+-----------------------------
 
 * Installation du package **Mongoose** avec la commande ``npm install mongoose``.
 
@@ -44,3 +44,28 @@ Base de données MongoDB :
 
 .. note::
     Accéder à la base de donnée *MongoDB*, en vous connectant avec votre identifiant à l'adresse suivante : `<https://www.mongodb.com/atlas/database>`_.
+
+Fichiers 
+========
+
+**app.js**
+----------
+
+Route POST : 
+************
+
+.. code-block:: javascript
+  :linenos:
+  :emphasize-lines: 2,3,4,6
+
+  app.post('/api/stuff', (req, res, next) => {
+  delete req.body._id;
+  const thing = new Thing({
+    ...req.body
+  });
+  thing.save()
+    .then(() => res.status(201).json({ message: 'Objet enregistré !'}))
+    .catch(error => res.status(400).json({ error }));
+});
+
+#. 

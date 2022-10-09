@@ -23,13 +23,21 @@ Contents
    :caption: Introduction
 
    presentation
-   front-end
-   back-end
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Front-end
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Back-end
+
+   Installation
+   Fichiers
 
 .. toctree::
    :maxdepth: 1
    :caption: Guides
 
    installation
-   specification
-
+   specification  
