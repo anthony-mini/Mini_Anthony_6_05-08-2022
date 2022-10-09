@@ -27,11 +27,7 @@ Enregistrement des Sauces dans la base données :
 
 * Enregistrement de l'objet, avec la methode **save**, dans notre base de donnée. 
 
-* La méthode **save** renvoie une Promise qui nous permet de ne pas avoir une expiration de requête. 
-
-* ``then()``nous renvoie une réponse de réussite avec un code : *201*. 
-
-* ``catch()``nous renvoie une réponse d'erreur générer par **Mongoose**, avec un code erreur : *400*. 
+* La méthode **save** renvoie une Promise qui nous permet de ne pas avoir une expiration de requête. ``then()``nous renvoie une réponse de réussite avec un code : *201*. ``catch()``nous renvoie une réponse d'erreur générer par **Mongoose**, avec un code erreur : *400*. 
 
 .. note:: 
 
@@ -48,7 +44,7 @@ Récupération des Sauces dans la base données :
   sauce.find()
     .then(things => res.status(200).json(sauces))
     .catch(error => res.status(400).json({ error }));
-});
+  });
 
 * Ici nous utilisons la méthode **find()** afin de renvoyer un tableau contenant toutes les sauces présentes dans notre base de données. 
 
