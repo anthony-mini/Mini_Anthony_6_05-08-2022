@@ -3,14 +3,14 @@
 *
 * Importation de moongose avec la methode ** require **
 *
-* Importation des models : sauce et user.
+* Importation des routes. Sauce & User.
 *
 */
 
 const express = require('express');
 const mongoose = require('mongoose');
-const sauce = require('./models/sauce');
-const user = require('./models/user');
+const sauceRoutes = require('./routes/sauce');
+const userRoutes = require('./routes/user');
 
 /**
  * ** Connexion à la base de données MongoDB via Mongoose **
@@ -44,6 +44,10 @@ app.use(express.json());
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS'); // envoie des requêtes avec les méthodes mentionnées ( GET ,POST , etc.)
   next();
 });
+
+// Importation des routes 
+app.use('/api/sauces', sauceRoutes);
+app.use('/api/auth', userRoutes);
 
 // Exportation de cette constante pour pouvoir y accéder dans d'autres fichiers
 module.exports = app;

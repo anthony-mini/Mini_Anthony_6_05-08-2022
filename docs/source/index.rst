@@ -36,10 +36,10 @@ Contents
 
    initialisation-back
    controleurs
+   specification
 
 .. toctree::
    :maxdepth: 1
    :caption: Guides
 
-   installation
-   specification  
+   Test 

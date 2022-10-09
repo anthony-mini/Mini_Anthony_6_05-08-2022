@@ -4,10 +4,13 @@ Installation des dépendances
 Démarrer le serveur Node
 ------------------------
 
+* À partir du dossier **cd/back**, lancer la commande ``npm init``.
+* Initialiser le projet comme point d'entrée, avec le fichier ``server.js``. 
+
 Package nodemon :
 ******************
 
-À partir du dossier front ``cd/back``, installer l'outil de developpement **nodemon** : 
+À partir du dossier ``cd/back``, installer l'outil de developpement **nodemon** : 
 
 .. code-block:: shell
 
