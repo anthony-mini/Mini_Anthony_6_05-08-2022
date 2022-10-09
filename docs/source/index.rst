@@ -28,12 +28,14 @@ Contents
    :maxdepth: 1
    :caption: Front-end
 
+   initialisation-front
+
 .. toctree::
    :maxdepth: 1
    :caption: Back-end
 
-   Installation
-   Fichiers
+   initialisation-back
+   fichiers
 
 .. toctree::
    :maxdepth: 1
