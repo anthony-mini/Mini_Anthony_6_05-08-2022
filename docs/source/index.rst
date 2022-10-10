@@ -37,6 +37,7 @@ Contents
    initialisation-back
    routes
    controleurs
+   authentification
    specification
 
 .. toctree::
