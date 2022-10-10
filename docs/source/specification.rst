@@ -61,8 +61,12 @@ doit vérifier si l'userId actuel correspond à l'userId de la sauce. Si l'userI
 correspond pas, renvoyer « 403: unauthorized request. » Cela permet de s'assurer
 que seul le propriétaire de la sauce peut apporter des modifications à celle-ci
 
-**Data ModelsSauce**
---------------------
+Data Models
+-----------
+
+**Sauce**
+*********
+
 * **userId** : String -- l'indentifiant MongoDB unique de l'utilisateur qui a créé la sauce. 
 * **name** : String -- nom de la sauce 
 * **manufacturer** : String -- fabricant de la sauce

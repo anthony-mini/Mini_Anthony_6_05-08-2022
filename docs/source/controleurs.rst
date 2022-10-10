@@ -1,6 +1,9 @@
 Controleurs CRUD
 ================
 
+.. note:: 
+  Le dossier contenant les controllers contient la logique métier. 
+
 Création et lecture des données
 -------------------------------
 

@@ -35,6 +35,7 @@ Contents
    :caption: Back-end
 
    initialisation-back
+   routes
    controleurs
    specification
 
