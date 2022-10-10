@@ -1,5 +1,10 @@
-// importation de mongoose
+/**
+ * Importation de mongoose
+ * Importation du plugin *uniqueValidator*
+ */
 const mongoose = require('mongoose');
+
+const uniqueValidator = require('mongoose-unique-validator');
 
 /**
  * ** Création du schéma de données **
@@ -12,10 +17,12 @@ const mongoose = require('mongoose');
  * #. Et prend le parametre required: true, pour rendre obligatoire chaque champ. 
  */
 
- const modelsUser = mongoose.Schema({
-    email: { type: String, required: true },
+  const userSchema = mongoose.Schema({
+    email: { type: String, required: true, unique: true },
     password: { type: String, required: true }
   });
 
+userSchema.plugin(uniqueValidator);
+
 //Exportation du schéma en tant que modèle Mongoose.
-module.exports = mongoose.model('sauce', modelsUser);
+module.exports = mongoose.model('sauce', userSchema);

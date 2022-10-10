@@ -12,7 +12,7 @@ const mongoose = require('mongoose');
  * #. Et prend le parametre required: true, pour rendre obligatoire chaque champ. 
  */
 
- const modelsSauce = mongoose.Schema({
+ const sauceSchema = mongoose.Schema({
     userId: { type: String, required: true },
     name: { type: String, required: true },
     manufacturer: { type: String, required: true },
@@ -27,4 +27,4 @@ const mongoose = require('mongoose');
   });
 
 //Exportation du schéma en tant que modèle Mongoose.
-module.exports = mongoose.model('sauce', modelsSauce);
+module.exports = mongoose.model('sauce', sauceSchema);
