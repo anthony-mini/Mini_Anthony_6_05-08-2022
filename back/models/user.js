@@ -25,4 +25,4 @@ const uniqueValidator = require('mongoose-unique-validator');
 userSchema.plugin(uniqueValidator);
 
 //Exportation du schéma en tant que modèle Mongoose.
-module.exports = mongoose.model('sauce', userSchema);
+module.exports = mongoose.model('Sauce', userSchema);

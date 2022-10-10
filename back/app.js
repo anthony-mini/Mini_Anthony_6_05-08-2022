@@ -45,7 +45,7 @@ app.use(express.json());
   next();
 });
 
-// Importation du point d'origine des routes 
+// Importation du segment d'origine des routes 
 app.use('/api/sauces', sauceRoutes);
 app.use('/api/auth', userRoutes);
 
