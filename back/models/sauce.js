@@ -20,11 +20,11 @@ const mongoose = require('mongoose');
     mainPepper: { type: String, required: true },
     imageUrl: { type: String, required: true },
     heat: { type: Number, required: true },
-    likes: { type: Number, required: true },
-    dislikes: { type: Number, required: true },
-    userLiked: { type: String, required: true },
-    userDisliked: { type: String, required: true },
+    // likes: { type: Number, required: true },
+    // dislikes: { type: Number, required: true },
+    // userLiked: { type: String, required: true },
+    // userDisliked: { type: String, required: true },
   });
 
 //Exportation du schéma en tant que modèle Mongoose.
-module.exports = mongoose.model('sauce', sauceSchema);
+module.exports = mongoose.model('Sauce', sauceSchema);
