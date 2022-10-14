@@ -1,4 +1,4 @@
-const Sauce = require('../models/Sauce');
+const Sauce = require('../models/sauce');
 
 /**
 * Exportation des fonctions de routing.
@@ -35,10 +35,10 @@ exports.getAllSauces = (req, res, next) => {
   };
 
   exports.createSauce = (req, res, next) => {
-    const sauceObject = JSON.parse(req.body.thing);
+    const sauceObject = JSON.parse(req.body.sauce);
     delete sauceObject._id;
     delete sauceObject._userId;
-    const thing = new Sauce({
+    const sauce = new Sauce({
           ...sauceObject,
           userId: req.auth.userId,
           imageUrl: `${req.protocol}://${req.get('host')}/images/${req.file.filename}`
@@ -51,7 +51,7 @@ exports.getAllSauces = (req, res, next) => {
 
     exports.updateSauce = (req, res, next) => {
         const sauceObject = req.file ? {
-            ...JSON.parse(req.body.thing),
+            ...JSON.parse(req.body.sauce),
             imageUrl: `${req.protocol}://${req.get('host')}/images/${req.file.filename}`
         } : { ...req.body };
       
@@ -61,7 +61,7 @@ exports.getAllSauces = (req, res, next) => {
                 if (sauce.userId != req.auth.userId) {
                     res.status(401).json({ message : 'Not authorized'});
                 } else {
-                    Sauce.updateOne({ _id: req.params.id}, { ...thingObject, _id: req.params.id})
+                    Sauce.updateOne({ _id: req.params.id}, { ...sauceObject, _id: req.params.id})
                     .then(() => res.status(200).json({message : 'Sauce modifié!'}))
                     .catch(error => res.status(401).json({ error }));
                 }
