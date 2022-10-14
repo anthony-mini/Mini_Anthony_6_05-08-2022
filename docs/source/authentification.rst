@@ -100,3 +100,11 @@ Tokens
        })
        .catch(error => res.status(500).json({ error }));
     };
+
+Téléchargement des photos
+-------------------------
+
+.. note:: 
+    **multer** est le plugin chargé de gérer les fichiers entrant dans les requêtes HTTP.
+    Pour l'installer dans le package, utiliser la commande ``npm install multer``. 
+

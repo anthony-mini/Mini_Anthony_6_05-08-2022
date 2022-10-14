@@ -9,8 +9,19 @@
 
 const express = require('express');
 const mongoose = require('mongoose');
+const path = require('path');
 const sauceRoutes = require('./routes/sauce');
 const userRoutes = require('./routes/user');
+// Appel de l'application express.
+const app = express();
+
+/**
+ * Analyser du corps de la requête au format JSON,
+ * venant de l'application front-end.
+ */
+
+app.use(express.json());
+
 
 /**
  * ** Connexion à la base de données MongoDB via Mongoose **
@@ -21,16 +32,6 @@ const userRoutes = require('./routes/user');
    useUnifiedTopology: true })
  .then(() => console.log('Connexion à MongoDB réussie !'))
  .catch(() => console.log('Connexion à MongoDB échouée !'));
-
-// Appel de l'application express.
-const app = express();
-
-/**
- * Analyser du corps de la requête au format JSON,
- * venant de l'application front-end.
- */
-
-app.use(express.json());
 
 /**
  * ** Création d'un header : **
@@ -48,6 +49,7 @@ app.use(express.json());
 // Importation du segment d'origine des routes 
 app.use('/api/sauces', sauceRoutes);
 app.use('/api/auth', userRoutes);
+app.use('/images', express.static(path.join(__dirname, 'images')));
 
 // Exportation de cette constante pour pouvoir y accéder dans d'autres fichiers
 module.exports = app;
