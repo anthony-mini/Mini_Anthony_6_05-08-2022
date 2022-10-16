@@ -1,10 +1,15 @@
 # Node
 node_modules
 
-# Images 
-*.jpg
-*.png
-*.webp
+# Ignore users upload
+.jpeg
+.jpg
+.png
+.webp
 
-
+# Does not ignore illustrations images
+!Piiquante-2.jpeg
+!Piiquante-3.jpeg
+!Piiquante-4.jpeg
+!Piiquante-5.jpeg
 

@@ -10,8 +10,8 @@ Création et lecture des données
 Enregistrement des Sauces dans la base données
 **********************************************
 
-.. code-block:: javascript
-  :emphasize-lines: 2,3,4,6
+.. .. code-block:: javascript
+..   :emphasize-lines: 2,3,4,6
 
 * Utilisation de la méthode **post()**. 
 
@@ -36,8 +36,8 @@ Récupération des Sauces
 
   Ici, l'on recherche à récupérer toutes la liste des sauces enregistrer dans la base de données
 
-.. code-block:: javascript
-  :emphasize-lines: 2
+.. .. code-block:: javascript
+..   :emphasize-lines: 2
 
 * Utilisation de la méthode **get()**. 
 
