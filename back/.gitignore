@@ -2,10 +2,10 @@
 node_modules
 
 # Ignore users upload
-.jpeg
-.jpg
-.png
-.webp
+*.jpeg
+*.jpg
+*.png
+*.webp
 
 # Does not ignore illustrations images
 !Piiquante-2.jpeg
