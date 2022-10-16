@@ -13,17 +13,6 @@ Enregistrement des Sauces dans la base données
 .. code-block:: javascript
   :emphasize-lines: 2,3,4,6
 
-  app.post('/api/sauces', (req, res, next) => {
-  delete req.body._id;
-  const sauce = new sauce({
-    ...req.body
-  });
-  sauce.save()
-    .then(() => res.status(201).json({ message: 'Sauce enregistré !'}))
-    .catch(error => res.status(400).json({ error }));
-  });
-
-
 * Utilisation de la méthode **post()**. 
 
 * Création d'une nouvelle instance du modèle ``sauce``, en lui passant un objet JavaScript, contenant toute les informations du corps requête (*userId, name, manufacturer, description, etc...*). 
@@ -49,12 +38,6 @@ Récupération des Sauces
 
 .. code-block:: javascript
   :emphasize-lines: 2
-
-  app.get('/api/sauces', (req, res, next) => {
-  sauce.find()
-    .then(sauces => res.status(200).json(sauces))
-    .catch(error => res.status(400).json({ error }));
-  });
 
 * Utilisation de la méthode **get()**. 
 
