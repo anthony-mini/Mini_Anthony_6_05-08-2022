@@ -13,3 +13,5 @@ node_modules
 !Piiquante-3.jpeg1666023756358.jpg
 !Piiquante-2.jpeg1666023718561.jpg
 
+# Ignore `dot .env` content (Password, userId, DataBaseName, Token)
+.env
