@@ -8,6 +8,7 @@
 */
 
 const express = require('express');
+require("dotenv").config();
 const mongoose = require('mongoose');
 
 const path = require('path');
@@ -21,9 +22,10 @@ const userRoutes = require('./routes/user');
  * ** Connexion à la base de données MongoDB via Mongoose **
  */
 
-mongoose.connect('mongodb+srv://admin-piiquante:u5jGx1XX6dKuecag-4Tmn9jcy3UxvxB4J-LxGLfPgT3h2chIxu@database-piiquante.disfiye.mongodb.net/?retryWrites=true&w=majority',
-{ useNewUrlParser: true,
-  useUnifiedTopology: true })
+mongoose.connect(
+`mongodb+srv://${process.env.DATABASE_USER}:${process.env.DATABASE_PASSWORD}@${process.env.DATABASE_NAME}/?retryWrites=true&w=majority`,
+{ useNewUrlParser: true, useUnifiedTopology: true }
+)
   .then(() => console.log('Connexion à MongoDB réussie !'))
   .catch(() => console.log('Connexion à MongoDB échouée !'));
   
