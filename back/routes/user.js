@@ -3,7 +3,7 @@
 * 
 * Utilisation de la methode Router(), d'express. 
 * 
-* Importation du controller de user
+* Importation de la logique de routing pour les controleurs User.
 */
 
 const express = require('express');
