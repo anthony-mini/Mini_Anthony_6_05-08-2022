@@ -1,0 +1,4 @@
+TOKEN_PASSWORD=your_secret_token_password_here
+DATABASE_USER=your_database_user
+DATABASE_NAME=your_database_name
+DATABASE_PASSWORD=your_database_password
