@@ -21,9 +21,10 @@ const userRoutes = require('./routes/user');
 /**
  * https://www.npmjs.com/package/express-rate-limit
  */
+
 const limiter = rateLimit({
 	windowMs: 10 * 60 * 1000, // 10 minutes
-	max: 1000, // Limitez chaque IP à 100 demandes par `fenêtre` (ici, par 10 minutes)
+	max: 300, // Limitez chaque IP à 300 demandes par `fenêtre` (ici, par 10 minutes)
 	standardHeaders: true, // Return rate limit info in the `RateLimit-*` headers
 	legacyHeaders: false, // Disable the `X-RateLimit-*` headers
 });
