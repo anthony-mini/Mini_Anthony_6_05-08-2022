@@ -7,11 +7,5 @@ node_modules
 *.png
 *.webp
 
-# Does not ignore illustrations images
-!Piiquante-4.jpeg1666023579503.jpg
-!Piiquante-5.jpeg1666023670863.jpg
-!Piiquante-3.jpeg1666023756358.jpg
-!Piiquante-2.jpeg1666023718561.jpg
-
 # Ignore `dot .env` content (Password, userId, DataBaseName, Token)
 .env
