@@ -94,4 +94,4 @@ Suppression d'une sauce
 user
 ----
 
-:ref: `Plus d'information sur l'authentification <auth_user>`
+:ref:`Plus d'information sur l'authentification <auth_user>`
