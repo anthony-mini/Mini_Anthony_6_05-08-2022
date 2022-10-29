@@ -35,7 +35,7 @@ Contents
    :caption: Back-end
 
    controleurs
-   middlware
+   middleware
    models
    routes
    authentification
