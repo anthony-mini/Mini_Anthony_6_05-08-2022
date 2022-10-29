@@ -5,11 +5,11 @@ Controleurs CRUD
   Le dossier contenant les controllers contient la logique métier.
 
 
-sauce
------
+Sauce.js
+--------
 
-Enregistrement des Sauces dans la base données
-**********************************************
+Création d'une sauce
+^^^^^^^^^^^^^^^^^^^^
 
 .. .. code-block:: javascript
 ..   :emphasize-lines: 2,3,4,6
@@ -31,7 +31,7 @@ Enregistrement des Sauces dans la base données
 
 
 Récupération des Sauces
-***********************
+^^^^^^^^^^^^^^^^^^^^^^^
 
 .. note::
 
@@ -49,7 +49,7 @@ Récupération des Sauces
 
 
 Récupération d'une Sauce spécifique
-***********************************
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: javascript
   :emphasize-lines: 1,2
@@ -65,7 +65,7 @@ Récupération d'une Sauce spécifique
 * Utilisation de la méthode **findOne** dans notre modèle *sauce* pour trouver la sauce unique ayant le même ``_id`` que le paramètre de la requête. 
 
 Modification d'une sauce 
-************************
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: javascript
   :emphasize-lines: 1,2
@@ -80,7 +80,7 @@ Modification d'une sauce
 * Utilisation de la méthode **updateOne** pour mettre à jour la *sauce* correspondant à l'objet passé en permière argument. 
 
 Suppression d'une sauce 
-***********************
+^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: javascript
   :emphasize-lines: 1,2
@@ -91,7 +91,7 @@ Suppression d'une sauce
     .catch(error => res.status(400).json({ error }));
   });
 
-user
-----
+User.js
+-------
 
 :ref:`Plus d'information sur la sécurité des utilisateurs <security_user>`

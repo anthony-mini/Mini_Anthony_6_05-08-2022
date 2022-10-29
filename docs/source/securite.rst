@@ -59,7 +59,7 @@ Multer
 .. _security_multer:
 
 .. note::
-    **Multer** est un *middleware* chargé de gérer les fichiers entrant dans les requêtes HTTP de type **POST** et **PUT**, pour la création de sauce et la modification d'une sauce. 
+    **Multer** est le *middleware* chargé de gérer les fichiers entrant dans les requêtes HTTP de type **POST** et **PUT**, pour la création de sauce et la modification d'une sauce. 
 
 :ref:`En savoir plus dans section Middlware/multer-config <multer_config>`
    
