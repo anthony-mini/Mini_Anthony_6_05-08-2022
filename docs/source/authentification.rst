@@ -4,7 +4,8 @@ Sécurité de l'API :
 Authentification :
 ------------------
 
-.. auth_user:
+.. link:
+.. _auth_user:
 
 .. note:: 
 
