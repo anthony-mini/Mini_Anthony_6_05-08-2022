@@ -91,7 +91,7 @@ Suppression d'une sauce
     .catch(error => res.status(400).json({ error }));
   });
 
-  user
-  ----
+user
+----
 
-  :ref: `Authentification :`
+:ref: `Authentification :`
