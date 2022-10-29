@@ -4,6 +4,8 @@ Sécurité de l'API :
 Authentification :
 ------------------
 
+.. auth_user:
+
 .. note:: 
 
     Pour notre système d'authentification, nous utilisons le package **bcrypt**. 
