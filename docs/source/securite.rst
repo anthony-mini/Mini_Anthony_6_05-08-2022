@@ -74,5 +74,23 @@ Installation
 Plus d'information sur **Multer** : `<https://www.npmjs.com/package/multer>`_
 
 
+Jsonwebtoken
+------------
 
+Mongoose
+--------
 
+mongoose-unique-validator
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Correctifs de versions
+----------------------
+
+npm audit
+^^^^^^^^^
+
+Dotenv
+------
+
+Express-Rate-Limit
+------------------
