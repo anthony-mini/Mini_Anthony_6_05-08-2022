@@ -34,11 +34,13 @@ Contents
    :maxdepth: 1
    :caption: Back-end
 
-   initialisation-back
-   routes
    controleurs
+   middlware
+   models
+   routes
    authentification
    specification
+   initialisation-back
 
 .. toctree::
    :maxdepth: 1

@@ -2,10 +2,11 @@ Controleurs CRUD
 ================
 
 .. note:: 
-  Le dossier contenant les controllers contient la logique métier. 
+  Le dossier contenant les controllers contient la logique métier.
 
-Création et lecture des données
--------------------------------
+
+sauce
+-----
 
 Enregistrement des Sauces dans la base données
 **********************************************
@@ -63,9 +64,6 @@ Récupération d'une Sauce spécifique
 
 * Utilisation de la méthode **findOne** dans notre modèle *sauce* pour trouver la sauce unique ayant le même ``_id`` que le paramètre de la requête. 
 
-Modification et suppression des données
----------------------------------------
-
 Modification d'une sauce 
 ************************
 
@@ -92,3 +90,8 @@ Suppression d'une sauce
     .then(() => res.status(200).json({ message: 'Sauce supprimé !'}))
     .catch(error => res.status(400).json({ error }));
   });
+
+  user
+  ----
+
+  :ref: `Authentification :`
