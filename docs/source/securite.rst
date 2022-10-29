@@ -3,6 +3,8 @@ Sécurité de l'API
 .. link:
 .. _security_user:
 
+:ref:`Rappel des exigences de sécurité :<exigence_security>.`
+
 Bcrypt 
 ------
 .. link:
