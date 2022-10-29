@@ -38,7 +38,7 @@ Contents
    middleware
    models
    routes
-   authentification
+   securite
    specification
    initialisation-back
 
