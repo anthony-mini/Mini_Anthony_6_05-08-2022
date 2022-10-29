@@ -109,6 +109,7 @@ exports.deleteSauce = (req, res, next) => {
      
 exports.likeStatusSauce = (req, res, next) => {
 
+    // Condition 1 : L'utilisateur like la sauce
     if(req.body.like === 1) {
 
       Sauce.updateOne(
@@ -125,6 +126,7 @@ exports.likeStatusSauce = (req, res, next) => {
         .catch((error) => res.status(400).json({ error }));
     }
 
+    // Condition 2 : L'utilisateur dislike la sauce
     else if(req.body.like === -1) {
 
       Sauce.updateOne(
@@ -141,7 +143,9 @@ exports.likeStatusSauce = (req, res, next) => {
         .then((sauce) => res.status(200).json({ message : "Successfull dislike post"}))
         .catch((error) => res.status(400).json({ error }));
 
-    } else { 
+    }
+    // Condition 3 : L'utilisateur unlike une sauce 
+    else { 
 
       Sauce.findOne({ _id: req.params.id })
 
@@ -157,13 +161,14 @@ exports.likeStatusSauce = (req, res, next) => {
                 $inc: { likes: -1 },
                 $pull: { usersLiked: req.body.userId }
               }
-
             )
 
               .then((sauce) => res.status(200).json({ message: "Successfull unlike post" }))
               .catch((error) => res.status(400).json({ error }));
 
-          } else if(sauce.usersDisliked.includes(req.body.userId)) {
+          }
+          // Condition 4 : L'utilisateur undislike une sauce 
+          else if(sauce.usersDisliked.includes(req.body.userId)) {
 
             Sauce.updateOne(
 
