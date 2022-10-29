@@ -3,7 +3,7 @@ Sécurité de l'API
 .. link:
 .. _security_user:
 
-:ref:`Rappel des exigences de sécurité :<exigence_security>.`
+:ref:`Rappel des exigences de sécurité : <exigence_security>.`
 
 Bcrypt 
 ------
@@ -63,7 +63,7 @@ Multer
 .. note::
     **Multer** est le *middleware* chargé de gérer les fichiers entrant dans les requêtes HTTP de type **POST** et **PUT**, pour la création de sauce et la modification d'une sauce. 
 
-:ref:`En savoir plus dans section Middlware/multer-config <multer_config>`
+:ref:`En savoir plus dans section Middlware/multer-config <multer_config>.`
    
 Installation 
 ^^^^^^^^^^^^
