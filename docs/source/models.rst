@@ -6,6 +6,7 @@ Sauces
 
 .. code-block:: javascript
     :linenos:
+     :emphasize-lines: 1,3,4,7
 
     const mongoose = require('mongoose');
 
@@ -34,10 +35,10 @@ Sauces
 
     #. Une clée, contenant le nom des objets.
     #. Son type (String, number, etc...)
-    #. Son parametre requis. 
+    #. Son parametre requis :
     
         * *true* rendant obligatoire chaque champs. 
-        * *defalt: 0* comprenant un valeur de 0 par défault. (1 = Like | -1 = Dislike)
+        * *default: 0* comprenant un valeur de 0 par défault. (1 = Like | -1 = Dislike)
         * *default: []* comprenant le *string* de l'user ID. 
 
 | **Ligne 17** : Exportation du schéma ``Sauce``.
