@@ -78,11 +78,11 @@ JSON-web-token
 --------------
 
 .. note:: 
-    **JSON-web-token** est le package *Node.Js* permettant de créer des données (token) avec une signature. 
-    Les jetons (tokens) sont signés à l'aide d'une clé privée. 
-    Cette sécurité permet la vérification de l'intégrité et de l'authenticité des données.
+        **JSON-web-token** est le package *Node.Js* permettant de créer des données (token) avec une signature. 
+        Les jetons (tokens) sont signés à l'aide d'une clé privée. 
+        Cette sécurité permet la vérification de l'intégrité et de l'authenticité des données.
 
-:ref:`Voir l'utilisation de **JSON-web-token** dans le middelware *auth.js* <middelware_auth>`
+:ref:`Voir l'utilisation de JSWT dans le middelware : auth.js <middelware_auth>`
 
 Mongoose
 --------
