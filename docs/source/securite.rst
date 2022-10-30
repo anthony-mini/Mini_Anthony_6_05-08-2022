@@ -76,6 +76,8 @@ Plus d'information sur **Multer** : `<https://www.npmjs.com/package/multer>`_
 
 JSON-web-token
 --------------
+.. link:
+.. _security_jwt
 
 | **JSON-web-token** est un package de *Node.Js* permettant de créer des données (token) avec une signature. 
 | Les jetons (tokens) sont signés à l'aide d'une clé privée. 
