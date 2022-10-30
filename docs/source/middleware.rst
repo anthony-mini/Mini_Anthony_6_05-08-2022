@@ -27,7 +27,7 @@ auth.js
     };
 
 | **Ligne 1 :** Importation de **JWT** pour vérifier l'authentification des données. 
-| :ref:`En savoir + <_security_jwt>`
+| :ref:`En savoir + <security_jwt>`
 
 | **Ligne 2 :** Importation du fichier `dotenv` contenant la clée du Token. 
 
