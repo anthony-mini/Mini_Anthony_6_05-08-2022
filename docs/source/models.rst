@@ -6,7 +6,6 @@ Sauces
 
 .. code-block:: javascript
     :linenos:
-     :emphasize-lines: 1,3,4,7
 
     const mongoose = require('mongoose');
 
