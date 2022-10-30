@@ -24,8 +24,8 @@ User
 
 | Ligne 1 à 2 : Importation de **mongoose** et du plugin **mongoose-unique-validator**.
 | Ligne 3 à 6 : Création du schéma de données ``User``.
-    * Utilisation de la fonction ``Schema``fourni par **Mongoose**.
-    * Déclaration de l'objet ``userSchema`` qui comporte différents champs : 
+    Utilisation de la fonction ``Schema`` fourni par **Mongoose**.
+    Déclaration de l'objet ``userSchema`` qui comporte différents champs : 
         - Une clée, contenant le nom des objets.
         - Son type (String, number, etc...)
         - Son parametre requis. Ici, *true* pour rendre obligatoire chaques champs.
