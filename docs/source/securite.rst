@@ -77,10 +77,9 @@ Plus d'information sur **Multer** : `<https://www.npmjs.com/package/multer>`_
 JSON-web-token
 --------------
 
-.. note:: 
-        **JSON-web-token** est le package *Node.Js* permettant de créer des données (token) avec une signature. 
-        Les jetons (tokens) sont signés à l'aide d'une clé privée. 
-        Cette sécurité permet la vérification de l'intégrité et de l'authenticité des données.
+| **JSON-web-token** est un package de *Node.Js* permettant de créer des données (token) avec une signature. 
+| Les jetons (tokens) sont signés à l'aide d'une clé privée. 
+| Cette sécurité permet la vérification de l'intégrité et de l'authenticité des données.
 
 :ref:`Voir l'utilisation de JSWT dans le middelware : auth.js <middelware_auth>`
 
@@ -89,6 +88,9 @@ Mongoose
 
 mongoose-unique-validator
 ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. link:
+.. _security_mongoose_unique_validator:
 
 Correctifs de versions
 ----------------------
