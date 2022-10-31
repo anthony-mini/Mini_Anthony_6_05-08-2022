@@ -22,12 +22,6 @@ Contents
 
 .. toctree::
    :maxdepth: 1
-   :caption: Introduction
-
-   presentation
-
-.. toctree::
-   :maxdepth: 1
    :caption: Front-end
 
    initialisation-front

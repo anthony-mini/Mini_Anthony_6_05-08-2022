@@ -4,7 +4,7 @@ Tester l'application en local
 Prérequis
 ---------
 
-Pour tester l'application en local, veuillez à installer les versions de : 
+Pour tester l'application en local, veuillez à installer les versions : 
 
 * Node.js : 16.18.0 ou supérieur ;
 
