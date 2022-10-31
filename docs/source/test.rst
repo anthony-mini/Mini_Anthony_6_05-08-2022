@@ -5,8 +5,8 @@ Prérequis
 ---------
 
 Pour tester l'application en local, veuillez à installer les versions de : 
-- Node.js : 16.18.0 ou supérieur ;
-- NPM : 8.19.2 ou supérieur. 
+* Node.js : 16.18.0 ou supérieur ;
+* NPM : 8.19.2 ou supérieur. 
 
 Installer les dépendances 
 -------------------------
@@ -61,3 +61,7 @@ Dans le dosser ``cd/back``:
 .. code-block:: shell
 
     nodemon server
+
+.. tip:: note 
+
+    Une fois les étapes compléter, vous pouvez tester l'application ! 😁
