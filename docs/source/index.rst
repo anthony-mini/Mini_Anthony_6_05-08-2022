@@ -35,7 +35,6 @@ Contents
    models
    routes
    securite
-   specification
    initialisation-back
 
 .. toctree::
@@ -43,3 +42,4 @@ Contents
    :caption: Guides
 
    test 
+   specification
