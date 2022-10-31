@@ -174,8 +174,6 @@ Exportation des fonctions de routing
 
 | **Ligne 2 :** Lorem
 
-|
-|
-|
+
 
 :ref:`Plus d'information sur la sécurité des utilisateurs <security_user>`
