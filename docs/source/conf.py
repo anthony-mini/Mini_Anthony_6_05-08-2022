@@ -2,7 +2,7 @@
 
 # -- Project information
 
-project = 'Piiquante'
+project = 'HOT TAKES'
 copyright = 'Openclassroom 2022'
 author = 'anthony mini'
 

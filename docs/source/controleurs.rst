@@ -2,13 +2,14 @@ Controleurs CRUD
 ================
 
 .. note:: 
-  Le dossier contenant les controllers contient la logique métier. 
+  Le dossier contenant les controllers contient la logique métier.
 
-Création et lecture des données
--------------------------------
 
-Enregistrement des Sauces dans la base données
-**********************************************
+Sauce.js
+--------
+
+Création d'une sauce
+^^^^^^^^^^^^^^^^^^^^
 
 .. .. code-block:: javascript
 ..   :emphasize-lines: 2,3,4,6
@@ -30,7 +31,7 @@ Enregistrement des Sauces dans la base données
 
 
 Récupération des Sauces
-***********************
+^^^^^^^^^^^^^^^^^^^^^^^
 
 .. note::
 
@@ -48,7 +49,7 @@ Récupération des Sauces
 
 
 Récupération d'une Sauce spécifique
-***********************************
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: javascript
   :emphasize-lines: 1,2
@@ -63,11 +64,8 @@ Récupération d'une Sauce spécifique
 
 * Utilisation de la méthode **findOne** dans notre modèle *sauce* pour trouver la sauce unique ayant le même ``_id`` que le paramètre de la requête. 
 
-Modification et suppression des données
----------------------------------------
-
 Modification d'une sauce 
-************************
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: javascript
   :emphasize-lines: 1,2
@@ -82,7 +80,7 @@ Modification d'une sauce
 * Utilisation de la méthode **updateOne** pour mettre à jour la *sauce* correspondant à l'objet passé en permière argument. 
 
 Suppression d'une sauce 
-***********************
+^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: javascript
   :emphasize-lines: 1,2
@@ -92,3 +90,91 @@ Suppression d'une sauce
     .then(() => res.status(200).json({ message: 'Sauce supprimé !'}))
     .catch(error => res.status(400).json({ error }));
   });
+
+User.js
+-------
+
+* Importation des packages :
+
+.. code-block:: javascript
+
+  const User = require('../models/User');
+
+  require("dotenv").config();
+
+  const bcrypt = require('bcrypt');
+  const jwt = require('jsonwebtoken');
+
+
+
+* Exportation des fonctions de routing :
+
+.. code-block:: javascript
+  :linenos:
+
+  exports.signup = (req, res, next) => {
+      
+      const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
+
+      if (regex.test(req.body.password)) {
+          
+          bcrypt
+          .hash(req.body.password, 10)
+          .then(hash => {
+              const user = new User({
+              email: req.body.email,
+              password: hash
+              });
+              user.save()
+              .then(() => res.status(201).json({ message: 'Utilisateur créé !' }))
+              .catch(error => res.status(400).json({ error }));
+          })
+          .catch(error => res.status(500).json({ error }));
+      } else {
+
+          res.statusMessage = "Mots de passe de 8 caractères, comportant une majuscule et un chiffre minimum demandé.";
+
+          res.status(403).json({ error: 'error' });
+      }
+  };
+
+| **Ligne 1 :** Lorem
+
+| **Ligne 2 :** Lorem
+
+.. code-block:: javascript
+  :linenos:
+
+  exports.login = (req, res, next) => { 
+
+      User.findOne({ email: req.body.email })
+          .then(user => {
+              if (!user) {
+                  return res.status(401).json({ error: 'Utilisateur non trouvé !' });
+              }
+              bcrypt.compare(req.body.password, user.password)
+                  .then(valid => {
+                      if (!valid) {
+                          return res.status(401).json({ error: 'Mot de passe incorrect !' });
+                      }
+                      res.status(200).json({
+                          userId: user._id,
+                          token: jwt.sign(
+                              { userId: user._id },
+                              process.env.TOKEN_PASSWORD,
+                              { expiresIn: '24h' }
+                          )
+                      });
+                  })
+                  .catch(error => res.status(500).json({ error }));
+          })
+          .catch(error => res.status(500).json({ error }));
+  };
+
+| **Ligne 1 :** Lorem
+
+| **Ligne 2 :** Lorem
+
+
+
+:ref:`Plus d'information sur la sécurité des utilisateurs <security_user>`

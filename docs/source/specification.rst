@@ -86,6 +86,9 @@ Data Models
 
 **Exigences de sécurité**
 -------------------------
+.. link:
+.. _exigence_security:
+
 * Le mot de passe de l'utilisateur doit être haché.
 * L'authentification doit être renforcée sur toutes les routes sauce requises.
 * Les adresses électroniques dans la base de données sont uniques et un plugin Mongoose approprié est utilisé pour garantir leur unicité et signaler les erreurs
