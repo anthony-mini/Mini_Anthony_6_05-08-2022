@@ -106,8 +106,9 @@ Importation des packages :
   const bcrypt = require('bcrypt');
   const jwt = require('jsonwebtoken');
 
-Exportation des fonctions de routing
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Exportation des fonctions de routing :
 
 .. code-block:: javascript
     :linenos:
