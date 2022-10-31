@@ -65,4 +65,4 @@ Dans le dosser ``cd/back``:
     nodemon server
 
 .. tip:: 
-    Une fois les étapes compléter, vous pouvez tester l'application en cliquant sur le serveur local : http://localhost:4200/ ! 😁
+    Une fois ces étapes terminées, vous pouvez tester l'application en cliquant sur le serveur local : http://localhost:4200/ ! 😁
