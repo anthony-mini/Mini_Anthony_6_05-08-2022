@@ -19,7 +19,9 @@ Dans le dosser ``cd/front``:
 - Lancer la commande : 
 
 .. code-block:: shell
-    npm install
+
+    npm install -g nodemon
+    nodemon server
 
 back-end
 ^^^^^^^^^
