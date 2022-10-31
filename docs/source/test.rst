@@ -20,8 +20,7 @@ Dans le dosser ``cd/front``:
 
 .. code-block:: shell
 
-    npm install -g nodemon
-    nodemon server
+    npm install
 
 back-end
 ^^^^^^^^^
@@ -33,7 +32,9 @@ Dans le dosser ``cd/back``:
 #. Lancer la commande : 
 
 .. code-block:: shell
+
     npm install
+
 
 Lancer les serveurs
 -------------------
@@ -46,6 +47,7 @@ Dans le dosser ``cd/front``:
 - Lancer la commande : 
 
 .. code-block:: shell
+
     npm run start
 
 
@@ -57,4 +59,5 @@ Dans le dosser ``cd/back``:
 - Lancer la commande : 
 
 .. code-block:: shell
+
     nodemon server
