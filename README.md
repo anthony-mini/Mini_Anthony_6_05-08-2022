@@ -72,6 +72,13 @@ Dans le dossier `cd/back` :
 nodemon server
 ```
 
+## Accéder au serveur local :
+
+Une fois ces étapes terminées, lancer le serveur local présent sur le port **4200**
+*****
+http://localhost:4200/
+*****
+
 ## Documentation technique de l'API
 
 https://mini-anthony-6-05-08-2022.readthedocs.io/fr/latest/#
