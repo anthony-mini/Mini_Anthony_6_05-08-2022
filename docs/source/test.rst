@@ -15,22 +15,23 @@ front-end
 ^^^^^^^^^
 
 Dans le dosser ``cd/front``:
-    #. Ajouter le fichier ``.env``fourni.
-    #. Ajouter une dossier ``images`` *vide*.
-    #. Lancer la commande : 
 
-        .. code-block:: shell
-            npm install
+- Lancer la commande : 
+
+.. code-block:: shell
+    npm install
 
 back-end
 ^^^^^^^^^
 
 Dans le dosser ``cd/back``:
 
-    - Lancer la commande : 
+#. Ajouter le fichier ``.env`` fourni.
+#. Ajouter une dossier ``images`` *vide*.
+#. Lancer la commande : 
 
-        .. code-block:: shell
-            npm install
+.. code-block:: shell
+    npm install
 
 Lancer les serveurs
 -------------------
@@ -40,10 +41,10 @@ front-end
 
 Dans le dosser ``cd/front``:
 
-    - Lancer la commande : 
+- Lancer la commande : 
 
-        .. code-block:: shell
-            npm run start
+.. code-block:: shell
+    npm run start
 
 
 back-end
@@ -51,7 +52,7 @@ back-end
 
 Dans le dosser ``cd/back``:
 
-    - Lancer la commande : 
+- Lancer la commande : 
 
-        .. code-block:: shell
-            nodemon server
+.. code-block:: shell
+    nodemon server
