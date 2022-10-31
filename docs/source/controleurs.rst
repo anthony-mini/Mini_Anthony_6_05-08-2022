@@ -94,10 +94,9 @@ Suppression d'une sauce
 User.js
 -------
 
-Importation des packages :
+* Importation des packages :
 
 .. code-block:: javascript
-    :linenos:
 
   const User = require('../models/User');
 
@@ -108,10 +107,10 @@ Importation des packages :
 
 
 
-Exportation des fonctions de routing :
+* Exportation des fonctions de routing :
 
 .. code-block:: javascript
-    :linenos:
+  :linenos:
 
   exports.signup = (req, res, next) => {
       
@@ -144,7 +143,8 @@ Exportation des fonctions de routing :
 | **Ligne 2 :** Lorem
 
 .. code-block:: javascript
-    :linenos:
+  :linenos:
+
   exports.login = (req, res, next) => { 
 
       User.findOne({ email: req.body.email })
