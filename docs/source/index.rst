@@ -11,6 +11,7 @@ Technologies utilisés :
 * **TypeScript**
 * **Node.js**
 * **Express**
+* **Express**
 * **MongoDB**
 
 .. note::
@@ -25,6 +26,7 @@ Contents
    :caption: Front-end
 
    initialisation-front
+   run-node-server
 
 .. toctree::
    :maxdepth: 1
@@ -41,5 +43,6 @@ Contents
    :maxdepth: 1
    :caption: Guides
 
+   specification
    test 
    specification

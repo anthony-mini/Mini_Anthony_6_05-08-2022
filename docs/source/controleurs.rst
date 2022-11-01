@@ -91,6 +91,134 @@ Suppression d'une sauce
     .catch(error => res.status(400).json({ error }));
   });
 
+Like et Dislike 
+^^^^^^^^^^^^^^^
+
+**Condition 1 : Like d'une sauce** 
+
+.. code-block:: javascript
+  :linenos:
+
+  exports.likeStatusSauce = (req, res, next) => {
+
+    // Condition 1 : L'utilisateur like la sauce
+    if(req.body.like === 1) {
+
+      Sauce.updateOne(
+        { _id: req.params.id },
+        {
+          $inc: { likes: req.body.like++ },
+          $push: { usersLiked: req.body.userId }
+        }
+      )
+        .then((sauce) => res.status(200).json({ message: "Successfull like post" }))
+        .catch((error) => res.status(400).json({ error }));
+    }
+
+| **Ligne 4 :** On verifie la valeur envoyer par le front-end.
+
+| **Ligne 6 :** Utilisation de la *méthode* **Update** pour mettre à jour le modèle de schéma **Sauce**.
+
+| **Ligne 9 :** ``$inc`` incrémentation de la valeur à **+ 1** de la clé ``Likes``.
+
+| **Ligne 10 :** ``$push`` On enregistre l'id de l'utilisateur dans la clé ``usersLiked``
+
+**Condition 2 : Dislike d'une sauce**
+
+.. code-block:: javascript
+  :linenos:
+
+    // Condition 2 : L'utilisateur dislike la sauce
+    else if(req.body.like === -1) {
+
+      Sauce.updateOne(
+
+        { _id:req.params.id },
+
+        {
+          $inc: { dislikes: req.body.like++ * -1 },
+          $push: {usersDisliked: req.body.userId }
+        }
+
+      )
+        .then((sauce) => res.status(200).json({ message : "Successfull dislike post"}))
+        .catch((error) => res.status(400).json({ error }));
+    }
+  
+| **Ligne 2 :** On verifie la valeur envoyer par le front-end.
+
+| **Ligne 4 :** Utilisation de la *méthode* **Update** pour mettre à jour le modèle de schéma **Sauce**.
+
+| **Ligne 8 :** ``$inc`` incrémentation de la valeur à **- 1** de la clé ``dislikes``.
+
+| **Ligne 9 :** ``$push`` On enregistre l'id de l'utilisateur dans la clé ``usersDisliked``
+
+**Condition 3 : L'utilisateur unlike une sauce**
+
+.. code-block:: javascript
+  :linenos:
+
+  else { 
+
+      Sauce.findOne({ _id: req.params.id })
+
+        .then((sauce) => {
+
+          if(sauce.usersLiked.includes(req.body.userId)) {
+
+            Sauce.updateOne(
+
+              { _id: req.params.id },
+
+              { 
+                $inc: { likes: -1 },
+                $pull: { usersLiked: req.body.userId }
+              }
+            )
+
+              .then((sauce) => res.status(200).json({ message: "Successfull unlike post" }))
+              .catch((error) => res.status(400).json({ error }));
+
+          }
+
+| **Ligne 3 :** Utilisation de la méthode **findOne** pour vérifier l'id utilisateur et l'id enregistrer dans la valeur du schéma de modèle : **userslikes**.
+
+| **Ligne 9 :** Utilisation de la *méthode* **Update** pour mettre à jour le modèle de schéma **Sauce**.
+
+| **Ligne 14 :** ``$inc`` incrémentation de la valeur à **- 1** de la clé ``Likes``.
+
+| **Ligne 15 :** ``$pull`` On retire l'id de l'utilisateur dans la clé ``usersLiked``
+
+**Condition 4 : L'utilisateur unDislike une sauce**
+
+.. code-block:: javascript
+  :linenos:
+
+  // Condition 4 : L'utilisateur undislike une sauce 
+    else if(sauce.usersDisliked.includes(req.body.userId)) {
+
+    Sauce.updateOne(
+
+      { _id: req.params.id },
+
+      { 
+        $inc: { dislikes: -1 },
+        $pull: { usersDisliked: req.body.userId }
+      }
+
+    )
+
+      .then((sauce) => res.status(200).json({ message: "Successfull undislike post" }))
+      .catch((error) => res.status(400).json({ error }));
+
+    }
+
+| **Ligne 4 :** Utilisation de la *méthode* **Update** pour mettre à jour le modèle de schéma **Sauce**.
+
+| **Ligne 9 :** ``$inc`` incrémentation de la valeur à **- 1** de la clé ``dislikes``.
+
+| **Ligne 10 :** ``$pull`` On retire l'id de l'utilisateur dans la clé ``usersDisliked``
+
 User.js
 -------
 
