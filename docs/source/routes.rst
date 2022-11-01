@@ -27,7 +27,7 @@ Importation des modules externes :
 
 Configuration de la fonction **rateLimit**
 
-| Utilisateur sur la même adresse IP, limité à 5 création de compte sur une tranche de 30 minutes
+    * Utilisateur sur la même adresse IP, limité à 5 création de compte sur une tranche de 30 minutes
 
 .. code-block:: javascript
   :linenos:
