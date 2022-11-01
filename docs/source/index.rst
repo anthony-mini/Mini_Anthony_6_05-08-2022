@@ -25,6 +25,7 @@ Contents
    :caption: Front-end
 
    initialisation-front
+   run-node-server
 
 .. toctree::
    :maxdepth: 1
