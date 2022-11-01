@@ -11,6 +11,7 @@ Technologies utilisés :
 * **TypeScript**
 * **Node.js**
 * **Express**
+* **Express**
 * **MongoDB**
 
 .. note::
@@ -44,3 +45,4 @@ Contents
 
    specification
    test 
+   specification
