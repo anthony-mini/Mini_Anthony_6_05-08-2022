@@ -20,8 +20,8 @@ Exécutez ``ng generate component nom-composant`` pour générer un nouveau comp
 
 Vous pouvez également utiliser ``ng generate directive|pipe|service|class|guard|interface|enum|module``.
 
-Build
-^^^^^
+Compilation
+^^^^^^^^^^^
 
 Exécutez ``ng build`` pour compiler le projet. 
 
