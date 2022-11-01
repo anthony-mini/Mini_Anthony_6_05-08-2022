@@ -5,7 +5,7 @@ Dépencances installés :
 -----------------------
 
 Initialiser le projet **node.JS** :
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 * À partir du dossier **cd/back**, lancer la commande ``npm init``.
 * Initialiser le projet comme point d'entrée, avec le fichier ``server.js``. 
