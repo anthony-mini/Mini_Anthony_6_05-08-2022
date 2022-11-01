@@ -10,8 +10,8 @@ Initialiser le projet **node.JS** :
 * À partir du dossier **cd/back**, lancer la commande ``npm init``.
 * Initialiser le projet comme point d'entrée, avec le fichier ``server.js``. 
 
-Package nodemon :
-^^^^^^^^^^^^^^^^^
+Package **nodemon** :
+^^^^^^^^^^^^^^^^^^^^^
 
 À partir du dossier ``cd/back``, installer l'outil de developpement **nodemon** : 
 
@@ -26,15 +26,15 @@ Accédez à `<http://localhost:3000>`_, pour accéder aux données de l'API.
     Nodemon est un package qui mettra à jour votre serveur démarré à chaque changement de fichier, vous facilitant le développement Node.
 
 
-Installation d'**Express**
----------------------------
+**Express**
+^^^^^^^^^^^
 
 #. Dans le dossier ``cd/back``, installer le package avec la commande ``npm install express --save``.
 
 #. Le fichier **app.js** est utilisé pour la gestion de l'application *Express*.
 
 Base de données **MongoDB** : 
------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 * Installation du package **Mongoose** avec la commande ``npm install mongoose``.
 
