@@ -3,7 +3,7 @@
 # -- Project information
 
 project = 'HOT TAKES'
-# copyright = 'Openclassroom 2022'
+copyright = 'Openclassroom 2022'
 author = 'anthony mini'
 
 release = '0.1'
