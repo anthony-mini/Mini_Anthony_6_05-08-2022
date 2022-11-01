@@ -44,5 +44,4 @@ Contents
    :caption: Guides
 
    specification
-   test 
-   specification
+   test
