@@ -11,7 +11,6 @@ Technologies utilisés :
 * **TypeScript**
 * **Node.js**
 * **Express**
-* **Express**
 * **MongoDB**
 
 .. note::
@@ -32,10 +31,11 @@ Contents
    :maxdepth: 1
    :caption: Back-end
 
+   config-app
+   routes
    controleurs
    middleware
    models
-   routes
    securite
    initialisation-back
 
