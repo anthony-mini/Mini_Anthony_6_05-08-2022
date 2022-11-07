@@ -32,4 +32,4 @@ Un *middleware* est un logiciel qui fournit aux applications des fonctionnalité
 | Un *Middleware*, est une fonction qui reçoit les objets ``request``et ``response``, pouvant les lires, les analyser et les manipuler, si besoin. 
 | 
 
-:ref:`Voir l'utilisation des middlware dans notre application <_middelware_auth>`
+:ref:`Voir l'utilisation des middlware dans notre application <middelware_auth>`
