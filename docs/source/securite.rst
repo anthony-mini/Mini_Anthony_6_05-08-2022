@@ -103,5 +103,7 @@ npm audit
 Dotenv
 ------
 
+Le module ``process.env.{variable}``, présent dans notre code, nous permet de faire appel au variable présente dans notre fichier **.env**.
+
 Express-Rate-Limit
 ------------------
