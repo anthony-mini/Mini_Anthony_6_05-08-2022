@@ -31,7 +31,7 @@ Contents
    :maxdepth: 1
    :caption: Back-end
 
-   structure
+   introdution
    config-app
    routes
    controleurs
@@ -46,3 +46,4 @@ Contents
 
    specification
    test
+   glossaire
