@@ -1,7 +1,7 @@
 Introduction
 ============
 
-L'API développer pour l'application **HotTakes** s'appuie sur le *runtime* :ref:`Voir l'utilisation de JSWT dans le middelware : auth.js <middelware_auth>`
+L'API développer pour l'application **HotTakes** s'appuie sur le *runtime* :ref:`NodeJS <node_gls>`
 
 Strucutre de l'API
 ------------------
