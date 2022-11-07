@@ -75,7 +75,7 @@ Helmet
 Configuration CORS 
 ------------------
 
-***CORS** ou "**Cross Origin Ressource Sharing**", s'agit d'un système de sécurité qui, par défaut, bloque les appels HTTP entre des serveurs différents, empêchant ainsi des requêtes malveillante d'acccéder à nos ressources sensible.
+**CORS** ou "**Cross Origin Ressource Sharing**", s'agit d'un système de sécurité qui, par défaut, bloque les appels HTTP entre des serveurs différents, empêchant ainsi des requêtes malveillante d'acccéder à nos ressources sensible.
 | Notre application *front-end* et *back-end*, communiquant entre elles, nous devons ajouter des **header** pour autoriser les **requêtes**, provenant de nos middleware.
 | Ainsi, pour permettre des requêtes cross-origin (et empêcher des erreurs CORS), des headers spécifiques de contrôle d'accès sont précisés ci-dessous :
 
@@ -83,7 +83,6 @@ Configuration CORS
   :linenos:
 
   app.use((req, res, next) => {
-
     
     res.setHeader('Access-Control-Allow-Origin', '*'); 
     res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content, Accept, Content-Type, Authorization');
@@ -93,9 +92,9 @@ Configuration CORS
   });
 
 | **Ligne 1 :** Accéder à notre API depuis n'importe quelle origine (``*``).
-| **Ligne 2 :** Ajout des headers mentionnés dans nos requêtes, envoyées vers notre API.
-| **Ligne 3 :** Autoriser l'envoi des requêtes avec les méthodes mentionnées (``GET``, ``POST``, ``PUT``, ...).
-| **Ligne 4 :** Renvoi vers le middleware suivant.
+| **Ligne 3 :** Ajout des headers mentionnés dans nos requêtes, envoyées vers notre API.
+| **Ligne 4 :** Autoriser l'envoi des requêtes avec les méthodes mentionnées (``GET``, ``POST``, ``PUT``, ...).
+| **Ligne 6 :** Renvoi vers le middleware suivant.
 
 Méthode de routing de l'application
 -----------------------------------
