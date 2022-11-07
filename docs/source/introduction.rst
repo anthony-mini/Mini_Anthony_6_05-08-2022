@@ -1,7 +1,7 @@
-Introdution
+Introduction
 ===========
 
-L'API développer pour l'application **HotTakes** s'appuie sur le *runtime* :ref:`NodeJS + <nodejs_glossaire>`
+L'API développer pour l'application **HotTakes** s'appuie sur le *runtime* :ref:`NodeJS <nodejs_glossaire>`
 
 Strucutre de l'API
 ------------------
