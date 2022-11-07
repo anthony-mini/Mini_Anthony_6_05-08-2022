@@ -31,6 +31,7 @@ Contents
    :maxdepth: 1
    :caption: Back-end
 
+   structure
    config-app
    routes
    controleurs
