@@ -32,10 +32,12 @@ Contents
    :maxdepth: 1
    :caption: Back-end
 
+   introduction
+   config-app
+   routes
    controleurs
    middleware
    models
-   routes
    securite
    initialisation-back
 
@@ -45,3 +47,4 @@ Contents
 
    specification
    test
+   glossaire

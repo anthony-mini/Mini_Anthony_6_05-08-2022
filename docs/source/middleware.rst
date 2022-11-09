@@ -1,4 +1,4 @@
-Middelware 
+Middleware 
 ==========
 
 auth.js

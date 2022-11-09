@@ -3,12 +3,6 @@
 *
 * Importation d'express contenu dans le fichier app.js
 *
-* Methode set pour configurer le port d'écoute
-*
-* Fonction d'écoute de requete http.
-*
-* Renvoie d'une réponse à l'écoute du port 3000 ou autres.
-*
 */
 
 const http = require('http');
@@ -48,7 +42,9 @@ const errorHandler = error => {
       throw error;
   }
 };
-
+/**
+ * Logique serveur via l'application Express 
+ * */ 
 const server = http.createServer(app);
 
 // Recherche et gestions des erreurs
