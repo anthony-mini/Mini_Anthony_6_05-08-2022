@@ -11,7 +11,6 @@ Technologies utilisés :
 * **TypeScript**
 * **Node.js**
 * **Express**
-* **Express**
 * **MongoDB**
 
 .. note::
