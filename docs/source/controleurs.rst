@@ -11,18 +11,39 @@ Sauce.js
 Création d'une sauce
 ^^^^^^^^^^^^^^^^^^^^
 
-.. .. code-block:: javascript
-..   :emphasize-lines: 2,3,4,6
+.. code-block:: javascript
+  :linenos:
 
-* Utilisation de la méthode **post()**. 
+  exports.createSauce = (req, res, next) => {
+    const sauceObject = JSON.parse(req.body.sauce);
+    delete sauceObject._id;
+    delete sauceObject.userId;
 
-* Création d'une nouvelle instance du modèle ``sauce``, en lui passant un objet JavaScript, contenant toute les informations du corps requête (*userId, name, manufacturer, description, etc...*). 
+    const sauce = new Sauce({
+        ...sauceObject,
+        userId: req.auth.userId,
 
-* Suppression du faux ``_id`` envoyé par l'application front-end, avec la méthode **delete**. 
+        imageUrl: `${req.protocol}://${req.get('host')}/images/${req.file.filename}`
+    });
+    
+    sauce.save()
+        .then(() => res.status(201).json({
+            message: 'Sauce enregistré !'
+        }))
+        .catch(error => res.status(400).json({
+            error
+        }));
+  };
 
-* Enregistrement de l'objet, avec la methode **save**, dans notre base de donnée. 
 
-* La méthode **save** renvoie une Promise qui nous permet de ne pas avoir une expiration de requête.
+| **Ligne 1 :** Exports de la méthode de routing *createSauce*, contenant la méthode **post()**. 
+
+| **Ligne 3 à 4 :** Suppression du faux ``_id`` et l'``userID`` envoyé par l'application front-end, avec la méthode **delete**. 
+
+| **Bloc, ligne 6 :** Création d'une nouvelle instance du modèle ``sauce``, en lui passant un objet JavaScript, contenant toute les informations du corps requête (*userId, name, manufacturer, description, etc...*). 
+
+| **Bloc, ligne 14 :** Enregistrement de l'objet, avec la methode **save**, dans notre base de donnée. 
+| La méthode **save** renvoie une Promise qui nous permet de ne pas avoir une expiration de requête.
 
 .. note:: 
 
@@ -35,14 +56,28 @@ Récupération des Sauces
 
 .. note::
 
-  Ici, l'on recherche à récupérer toutes la liste des sauces enregistrer dans la base de données
+  Récupération de toutes la liste des sauces enregistrer dans la base de données.
 
-.. .. code-block:: javascript
-..   :emphasize-lines: 2
+.. code-block:: javascript
+  :linenos:
 
-* Utilisation de la méthode **get()**. 
+  exports.getAllSauces = (req, res, next) => {
+  Sauce.find().then(
+      (sauces) => {
+          res.status(200).json(sauces);
+      }
+    ).catch(
+      (error) => {
+          res.status(400).json({
+              error: error
+          });
+      }
+    );
+  };
 
-* Ici nous utilisons la méthode **find()** afin de renvoyer un tableau contenant toutes les sauces présentes dans notre base de données. 
+| **Ligne 1 :** Exports de la méthode de routing *getAllSauces*, contenant la méthode **get()**. 
+
+| **Ligne 2 :** Méthode **find()** afin de renvoyer un tableau contenant toutes les sauces présentes dans notre base de données. 
 
 .. note::
   La base de données MongoDB est fractionnée en collections : le nom de la collection est défini par défaut sur le pluriel du nom du modèle. Ici, ce sera sauce**S**.
@@ -52,44 +87,82 @@ Récupération d'une Sauce spécifique
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: javascript
-  :emphasize-lines: 1,2
+  :linenos:
 
-  app.get('/api/sauces/:id', (req, res, next) => {
-  sauce.findOne({ _id: req.params.id })
-    .then(sauce => res.status(200).json(sauce))
-    .catch(error => res.status(404).json({ error }));
-  });
+  exports.getOneSauce = (req, res, next) => {
+  Sauce.findOne({
+      _id: req.params.id
+  }).then(
+      (sauce) => {
+          res.status(200).json(sauce);
+      }
+  ).catch(
+      (error) => {
+          res.status(404).json({
+              error: error
+          });
+      }
+  );};
 
-* Utilisation de la méthode **get()**. 
+| **Ligne 1 :** Exportation de la méthode *getOneSauce*, contenant la méthode de routing : **get()**. 
 
-* Utilisation de la méthode **findOne** dans notre modèle *sauce* pour trouver la sauce unique ayant le même ``_id`` que le paramètre de la requête. 
+| **Ligne 2 :** Utilisation de la méthode **findOne** dans notre modèle *Sauce* pour trouver la sauce unique ayant le même ``_id`` que le paramètre de la requête. 
 
 Modification d'une sauce 
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: javascript
-  :emphasize-lines: 1,2
+  :linenos:
 
-  app.put('/api/sauces/:id', (req, res, next) => {
-  sauce.updateOne({ _id: req.params.id }, { ...req.body, _id: req.params.id })
-    .then(() => res.status(200).json({ message: 'Sauce modifié !'}))
-    .catch(error => res.status(400).json({ error }));
-  });
+  exports.updateSauce = (req, res, next) => {
+  const sauceObject = req.file ? {
+    ...JSON.parse(req.body.sauce),
+    imageUrl: `${req.protocol}://${req.get('host')}/images/${req.file.filename}`
+  } : { ...req.body };
+  
+  delete sauceObject._userId;
+  Sauce.findOne({_id: req.params.id})
+  .then((sauce) => {
+    if (sauce.userId != req.auth.userId) {
+      res.status(401).json({ message : 'Not authorized'});
+    } else {
+      Sauce.updateOne({ _id: req.params.id}, { ...sauceObject, _id: req.params.id})
+      .then(() => res.status(200).json({message : 'Sauce modifié!'}))
+              .catch(error => res.status(401).json({ error }));
+          }
+      })
+      .catch((error) => {
+          res.status(400).json({ error });
+      });
+  };
 
-* Utilisation de la méthode **put()**.
-* Utilisation de la méthode **updateOne** pour mettre à jour la *sauce* correspondant à l'objet passé en permière argument. 
+| **Ligne 1 :** exports de la méthode updateSauce, avec la méthode **put()**.
+| **Ligne 1 :** Méthode **updateOne** pour mettre à jour la *sauce* correspondant à l'objet passé en permière argument. 
 
 Suppression d'une sauce 
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 .. code-block:: javascript
-  :emphasize-lines: 1,2
+  :linenos:
 
-  app.delete('/api/sauces/:id', (req, res, next) => {
-  sauce.deleteOne({ _id: req.params.id })
-    .then(() => res.status(200).json({ message: 'Sauce supprimé !'}))
-    .catch(error => res.status(400).json({ error }));
-  });
+  exports.deleteSauce = (req, res, next) => {
+    Sauce
+      .findOne({ _id: req.params.id })
+      .then((sauce) => {
+
+        const filename = sauce.imageUrl.split("/images/")[1];
+
+        fs.unlink(`images/${filename}`, () => {
+          
+            Sauce
+            .deleteOne({ _id: req.params.id })
+            .then(() => res.status(200).json({ message: "Sauce supprimé !" }))
+            .catch((error) => res.status(400).json({ error }));
+
+        });
+      })
+      .catch((error) => res.status(500).json({ error }));
+  };
 
 Like et Dislike 
 ^^^^^^^^^^^^^^^
@@ -266,9 +339,9 @@ User.js
       }
   };
 
-| **Ligne 1 :** Lorem
+.. | **Ligne 1 :** Lorem
 
-| **Ligne 2 :** Lorem
+.. | **Ligne 2 :** Lorem
 
 .. code-block:: javascript
   :linenos:
@@ -299,9 +372,9 @@ User.js
           .catch(error => res.status(500).json({ error }));
   };
 
-| **Ligne 1 :** Lorem
+.. | **Ligne 1 :** Lorem
 
-| **Ligne 2 :** Lorem
+.. | **Ligne 2 :** Lorem
 
 
 
