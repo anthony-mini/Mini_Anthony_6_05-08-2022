@@ -2,7 +2,16 @@ Controleurs CRUD
 ================
 
 .. note:: 
-  Le dossier contenant les controllers contient la logique métier.
+  Le dossier contenant les controllers : **sauce** et **user**, contient la logique métier, créer à l'aide des opérations CRUD. 
+
+* Opérations CRUD : 
+
+**Désigne les quatre opérations de base pour la persistance des données, particulièrement utilisés dans la création d'API.**
+
+| **C**reate --> Créer
+| **R**ead --> Lire 
+| **U**pdate --> Modifier
+| **D**elete --> Supprimer
 
 
 Sauce.js
@@ -37,6 +46,8 @@ Création d'une sauce
 
 
 | **Ligne 1 :** Exports de la méthode de routing *createSauce*, contenant la méthode **post()**. 
+| Reçoit les objets ``request``et ``response`` pour lire, analyser et manipuler les données. 
+| La méthode ``next``, nous permet de passer l'exécution au *middleware* suivant.
 
 | **Ligne 3 à 4 :** Suppression du faux ``_id`` et l'``userID`` envoyé par l'application front-end, avec la méthode **delete**. 
 
@@ -76,6 +87,8 @@ Récupération des Sauces
   };
 
 | **Ligne 1 :** Exports de la méthode de routing *getAllSauces*, contenant la méthode **get()**. 
+| Reçoit les objets ``request``et ``response`` pour lire, analyser et manipuler les données. 
+| La méthode ``next``, nous permet de passer l'exécution au *middleware* suivant.
 
 | **Ligne 2 :** Méthode **find()** afin de renvoyer un tableau contenant toutes les sauces présentes dans notre base de données. 
 
@@ -105,6 +118,8 @@ Récupération d'une Sauce spécifique
   );};
 
 | **Ligne 1 :** Exportation de la méthode *getOneSauce*, contenant la méthode de routing : **get()**. 
+| Reçoit les objets ``request``et ``response`` pour lire, analyser et manipuler les données. 
+| La méthode ``next``, nous permet de passer l'exécution au *middleware* suivant.
 
 | **Ligne 2 :** Utilisation de la méthode **findOne** dans notre modèle *Sauce* pour trouver la sauce unique ayant le même ``_id`` que le paramètre de la requête. 
 
@@ -137,7 +152,10 @@ Modification d'une sauce
   };
 
 | **Ligne 1 :** exports de la méthode updateSauce, avec la méthode **put()**.
-| **Ligne 1 :** Méthode **updateOne** pour mettre à jour la *sauce* correspondant à l'objet passé en permière argument. 
+| Reçoit les objets ``request``et ``response`` pour lire, analyser et manipuler les données. 
+| La méthode ``next``, nous permet de passer l'exécution au *middleware* suivant.
+
+| **Ligne 14 :** Méthode **updateOne** pour mettre à jour la *sauce* correspondant à l'objet passé en permière argument. 
 
 Suppression d'une sauce 
 ^^^^^^^^^^^^^^^^^^^^^^^
