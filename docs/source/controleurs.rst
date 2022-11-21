@@ -8,12 +8,6 @@ Controleurs CRUD
 
 **Désigne les quatre opérations de base pour la persistance des données, particulièrement utilisés dans la création d'API.**
 
-| **C**reate --> Créer
-| **R**ead --> Lire 
-| **U**pdate --> Modifier
-| **D**elete --> Supprimer
-
-
 Sauce.js
 --------
 
