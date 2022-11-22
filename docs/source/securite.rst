@@ -109,7 +109,6 @@ Dotenv
 | - token,
 | - Nom et mots de passe utilisateur de la base de donnée,
 | - etc, ...
-
 | Le fichier ``.env``de notre code, contient toute nos variables d'environnement.
 
 .. note::

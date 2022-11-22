@@ -2,6 +2,7 @@
 node_modules
 
 # Ignore users upload
+images
 *.jpeg
 *.jpg
 *.png
