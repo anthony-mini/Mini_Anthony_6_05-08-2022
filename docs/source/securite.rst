@@ -109,11 +109,11 @@ Dotenv
 | - token,
 | - Nom et mots de passe utilisateur de la base de donnée,
 | - etc, ...
-| Le fichier ``.env``de notre code, contient toute nos variables d'environnement.
+| Le fichier ``.env`` de notre code, contient toute nos variables d'environnement.
 
 .. note::
     Notre fichier ``.env`` doit être ignoré de tout commit *git*. 
-    | Nos variables d'environnement seront donc stocké en local et ignoré dans notre fichier **.gitignore** à la racine de notre projet. 
+    Nos variables d'environnement seront donc stocké en local et ignoré dans notre fichier **.gitignore** à la racine de notre projet. 
 
 Express-Rate-Limit
 ------------------
