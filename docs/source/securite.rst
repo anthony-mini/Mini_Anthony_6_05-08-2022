@@ -124,7 +124,7 @@ Express-Rate-Limit
 Middleware d'Express, utilisé pour limité le nombre de requête répétés pour une API.
 
 1er Cas : 
-*********
+^^^^^^^^^
 
 Dans ce cas précis, **express-rate-limit** est utilisé pour limité le nombre de requête à 300, toute les 10 minutes.
 
@@ -138,7 +138,7 @@ Dans ce cas précis, **express-rate-limit** est utilisé pour limité le nombre 
     });
 
 2nd Cas : 
-*********
+^^^^^^^^^
 
 Dans ce cas précis, **express-rate-limit** est utilisé pour limité le nombre de création de compte à 5, sur une durée de 30 minutes.
 
