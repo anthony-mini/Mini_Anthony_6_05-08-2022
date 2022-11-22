@@ -94,9 +94,12 @@ JSON-web-token
 
 Mongoose
 --------
+Mongoose est une bibliothèque de programmation orientée objet JavaScript qui crée une connexion entre MongoDB et l'environnement d'exécution JavaScript Node.js.
 
 mongoose-unique-validator
 ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+:ref:`Voir l'utilisation de moongose-unique-validator, dans notre schema de donnée utilisateurs. <mongoose_unique_validator>`
 
 .. link:
 .. _security_mongoose_unique_validator:

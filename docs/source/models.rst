@@ -44,6 +44,8 @@ Sauces
 
 User
 ----
+.. link:
+.. _mongoose_unique_validator:
 
 .. code-block:: javascript
     :linenos:
