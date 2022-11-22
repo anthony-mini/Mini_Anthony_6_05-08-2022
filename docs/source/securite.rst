@@ -99,6 +99,9 @@ Correctifs de versions
 
 npm audit
 ^^^^^^^^^
+Vérification des versions packages installer pour le développement de notre projet.
+
+| Si des vulnérabilités sont détecter, il faut mettre à jour les dépendances 
 
 Dotenv
 ------
@@ -117,3 +120,34 @@ Dotenv
 
 Express-Rate-Limit
 ------------------
+
+Middleware d'Express, utilisé pour limité le nombre de requête répétés pour une API.
+
+1er Cas : 
+*********
+
+Dans ce cas précis, **express-rate-limit** est utilisé pour limité le nombre de requête à 300, toute les 10 minutes.
+
+.. code:: javascript
+
+    const limiter = rateLimit({
+	windowMs: 10 * 60 * 1000, // 10 minutes
+	max: 300, // Limitez chaque IP à 300 demandes par `fenêtre` (ici, par 10 minutes)
+	standardHeaders: true, // Return rate limit info in the `RateLimit-*` headers
+	legacyHeaders: false, // Disable the `X-RateLimit-*` headers
+    });
+
+2nd Cas : 
+*********
+
+Dans ce cas précis, **express-rate-limit** est utilisé pour limité le nombre de création de compte à 5, sur une durée de 30 minutes.
+
+.. code:: javascript
+
+    const createAccountLimiter = rateLimit({
+	windowMs : 30 * 60 * 1000, // 30 minutes
+	max : 5, // Limitez chaque IP à 5 création des demandes de compte par `fenêtre` (ici, par tranche de 30 minutes)
+	message : 'Trop de comptes créés à partir de cette IP, veuillez réessayer dans 30 minutes',
+	standardHeaders : true, // Informations sur la limite de taux de retour dans les en-têtes `RateLimit-*`
+	legacyHeaders : false, // Désactiver les en-têtes `X-RateLimit-*`
+    });
