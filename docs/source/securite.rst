@@ -103,7 +103,18 @@ npm audit
 Dotenv
 ------
 
-Le module ``process.env.{variable}``, présent dans notre code, nous permet de faire appel au variable présente dans notre fichier **.env**.
+**Dotenv** est un module utilisé pour accéder aux *variables d'environnement* de notre application. 
+
+| À l'exécution de notre application *NodeJS*, la variable globale ``process.env.``, injectent les informatons relatives aux : 
+* token,
+* Nom et mots de passe utilisateur de la base de donnée,
+* ...
+
+Le fichier ``.env``de notre code, contient toute nos variables d'environnement.
+
+.. note::
+    Notre fichier ``.env`` doit être ignoré de tout commit *git*. 
+    | Nos variables d'environnement seront donc stocké en local et ignoré dans notre fichier **.gitignore** à la racine de notre projet. 
 
 Express-Rate-Limit
 ------------------

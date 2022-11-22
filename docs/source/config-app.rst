@@ -72,6 +72,8 @@ Helmet
 
 | **Ligne 1 :** Méthode ``app.use()``, nous permet d'attribuer notre middleware *helmet* à toute notre application back-end, sans route spécifique.
 
+:ref:`En savoir plus sur Helmet <helmet>`
+
 Configuration CORS 
 ------------------
 
