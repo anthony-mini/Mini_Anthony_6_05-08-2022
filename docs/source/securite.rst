@@ -106,11 +106,11 @@ Dotenv
 **Dotenv** est un module utilisé pour accéder aux *variables d'environnement* de notre application. 
 
 | À l'exécution de notre application *NodeJS*, la variable globale ``process.env.``, injectent les informatons relatives aux : 
-* token,
-* Nom et mots de passe utilisateur de la base de donnée,
-* ...
+    * token,
+    * Nom et mots de passe utilisateur de la base de donnée,
+    * ...
 
-Le fichier ``.env``de notre code, contient toute nos variables d'environnement.
+| Le fichier ``.env``de notre code, contient toute nos variables d'environnement.
 
 .. note::
     Notre fichier ``.env`` doit être ignoré de tout commit *git*. 
