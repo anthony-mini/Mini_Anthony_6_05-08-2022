@@ -85,6 +85,13 @@ JSON-web-token
 
 :ref:`Voir l'utilisation de JSWT dans le middelware : auth.js <middelware_auth>`
 
+| L’authentification forte par jeton s’appuie sur un protocole qui permet à un utilisateur de recevoir un jeton d’accès unique après avoir confirmé son identité. 
+| L’utilisateur bénéficie alors, pendant toute la durée de vie du jeton, d’un accès à l’application ou au site web pour lequel le jeton lui a été accordé. 
+| Il n’a ainsi plus besoin de saisir ses identifiants à chaque fois qu’il ouvre la même page web.
+| Les jetons d’authentification fonctionnent à la manière d’un ticket d’entrée à validité limitée : ils accordent un accès en continu pendant leur durée de validité. 
+| Dès que l’utilisateur se déconnecte ou quitte l’application, le jeton est invalidé.
+
+
 Mongoose
 --------
 
@@ -97,8 +104,8 @@ mongoose-unique-validator
 Correctifs de versions
 ----------------------
 
-npm audit
-^^^^^^^^^
+**npm audit**
+
 Vérification des versions packages installer pour le développement de notre projet.
 
 | Si des vulnérabilités sont détecter, il faut mettre à jour les dépendances 
